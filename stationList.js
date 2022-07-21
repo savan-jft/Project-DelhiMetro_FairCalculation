@@ -15,9 +15,6 @@ function onSelectSource(){
     var source = document.getElementById('sourceStation').selectedIndex;
     console.log(source);
 }
-//console.log(source);
-
-
 
 // Selecting Destination and getting its value
 var selectDestination = document.getElementById("destStation"), stationList;
@@ -35,9 +32,7 @@ function onSelectDest(){
     console.log(destination);
 }
 
-
-
-//getting payment method
+// getting payment method
 
 function paymentMethod(){
     var payMethod = document.getElementById('payMethod').selectedIndex;
@@ -45,15 +40,13 @@ function paymentMethod(){
     console.log(method);
 }
 
+
+
 //console.log(method);
 
 
 // calculating fare between stations
 
-var a = 10;
-var b = 1;
-var value = Math.abs(b-a);
-//console.log(value)
 
 
 
