@@ -14,37 +14,37 @@
         <h3 class="h3">Calculate fair between two Metro Stations</h3>
         <div>
         <div class="Source-Station">
-            Source Station <select name="" id="sourceStation" onchange="onSelectSource()">
+            Source Station <select name="" id="sourceStation">
                 <option value="default">Select Source</option>
             </select>
         </div>
 
         <div class="Destination-Station">
-            Destination Station <select name="" id="destStation" onchange="onSelectDest()">
+            Destination Station <select name="" id="destStation">
                 <option value="default" id="">Select Destination</option>
             </select>
         </div>
         </div><br>
 
         <div class="Payment-Method">
-            Payment Method<select name="" id="payMethod" onchange="paymentMethod()">
+            Payment Method<select name="" id="payMethod">
                 <option value="select">Select</option>
-                <option value="card">Card</option>
-                <option value="token">Token</option>
+                <option value="card" id="card">Card</option>
+                <option value="token" id="token">Token</option>
             </select>
         </div><br>
 
         <div class="fare">
             <form action="">
-                <input type="text" id="fare">
+                <input type="text" id="fare" >
             </form>
         </div>
 
-        <div class="calculateFare">
-            <button class="Calculate-Fare" onclick="calFare()">Calculate Fare</button>
+        <div class="calculateFair">
+            <button id="Calculate-Fair" onclick="calculateFair()">Calculate Fare</button>
         </div>
     </div>
 
-    <script src="stationList.js"></script>
+    <script src="calculateFare.js"></script>
 </body>
 </html>
