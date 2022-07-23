@@ -2,9 +2,9 @@ function dropDown(){
     var stationList = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
     for(let i=0;i<=stationList.length-1;i++)
     {
-    document.getElementById('sourceStation').innerHTML+=`<option value=${i+1}>${stationList[i]}</option>`;
+    document.getElementById('sourceStation').innerHTML += `<option value=${i+1}>${stationList[i]}</option>`;
  
-    document.getElementById('destStation').innerHTML+=`<option value=${i+1}>${stationList[i]}</option>`;
+    document.getElementById('destStation').innerHTML += `<option value=${i+1}>${stationList[i]}</option>`;
     }
 }
 dropDown();
@@ -39,17 +39,20 @@ function calculateFair(){
     else if(noOfStations>=21 && noOfStations<=24){
         fair = 60;
     }
-    else{s
+    else{
         fair = 70;
     }
 
 
 
-    let card = document.getElementById('card').value;
-    let token = document.getElementById('token').value;
+    let payment1 = document.getElementById('card').value;
+    let payment2 = document.getElementById('token').value;
 
-    console.log(card);
-    console.log(token);
+    console.log(payment1);
+    console.log(payment2);
+    console.log(typeof payment1);
+    console.log(typeof payment2);
+
     let discount = 10;
     
     function disc(fair){
@@ -58,7 +61,7 @@ function calculateFair(){
         }
         else
         {
-            if(card){
+            if(payment1 == 'token'){
                 return fair-(Math.floor((fair*discount)/100));
             }
             else{
@@ -72,9 +75,3 @@ function calculateFair(){
     console.log(final_fair);
     document.getElementById('fare').value = final_fair;
 }
- 
-
-
-
-
- 
